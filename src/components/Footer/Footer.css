@@ -1,0 +1,176 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 100%;
+    color: gray;
+    display: flex;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 100%;
+    align-self: stretch;
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-end;
+    margin: 0px 150px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+
+.footer-text {
+    align-self: stretch;
+    position: relative;
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    line-height: 140%;
+    text-transform: capitalize;
+    white-space: pre-wrap;
+    margin: 0;
+}
+
+.footer-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+}
+
+.kku-stock-photos {
+    align-self: stretch;
+    position: relative;
+    letter-spacing: 0.01em;
+    line-height: 140%;
+    text-transform: capitalize;
+    font-size: 50px;
+}
+
+.kku-logo {
+    width: 300px;
+    position: relative;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+
+.kku-icon {
+    width: 35px;
+    position: relative;
+    max-height: 100%;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.cad-icon {
+    width: 50px;
+    position: relative;
+    max-height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.logoicon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+
+
+.bottom-bar {
+    width: 100%;
+    max-width: 100%;
+    align-self: stretch;
+    position: relative;
+    background-color: #d9d9d9;
+    height: 35px;
+    bottom: 0;
+    margin-top: 40px;
+    box-sizing: border-box;
+}
+
+
+@media (max-width: 955px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        margin: 0px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+
+    }
+
+    .footer-container {
+        width: 100%;
+        max-width: 100%;
+        color: gray;
+        display: flex;
+
+    }
+
+    .footer-content {
+        width: 100%;
+        max-width: 100%;
+        align-self: stretch;
+        display: flex;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        margin: 0px;
+        box-sizing: border-box;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .kku-stock-photos {
+        font-size: 36px;
+    }
+
+    .footer-text {
+        font-size: 14px;
+    }
+
+    .footer-details {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logoicon {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .kku-logo {
+        width: 250px;
+    }
+
+    .kku-icon {
+        width: 25px;
+    }
+
+    .cad-icon {
+        width: 40px;
+    }
+
+}

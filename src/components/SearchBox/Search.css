@@ -1,0 +1,41 @@
+.search-container {
+    width: 100%;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  
+}
+
+/* @media (max-width: 768px) {
+    .search-container {
+        width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-container {
+        width: 200px;
+    }
+} */
+
+.search-container .MuiOutlinedInput-root {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* ปกติ โปร่งใส 50% */
+    border-radius: 8px;
+    color: rgb(0, 0, 0);
+    transition: background-color 0.3s ease;
+    /* เพิ่มเอฟเฟกต์เปลี่ยนสี */
+}
+
+/* เมื่อ hover หรือ focus (คลิก) */
+.search-container .MuiOutlinedInput-root:hover,
+.search-container .MuiOutlinedInput-root.Mui-focused {
+    background-color: rgba(255, 255, 255, 1);
+    /* เปลี่ยนเป็นสีขาว 100% */
+}
+
+.search-container .MuiInputBase-input::placeholder {
+    color: gray;
+    /* สีของ placeholder */
+}

@@ -1,0 +1,319 @@
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-overlay.closing {
+    animation: fadeOut 0.3s ease-out forwards;
+}
+
+.modal {
+    position: relative;
+    background: white;
+    padding: 40px;
+    width: 1000px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: slideUp 0.3s ease-out;
+}
+
+.modal.closing {
+    animation: slideDown 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+}
+
+.modal-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.modal-left-container {
+    width: 100%;
+}
+
+.modal-right-container {
+    width: 100%;
+}
+
+
+.modal-image {
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    object-position: center;
+}
+
+.modal-headline-container {
+    width: 100%;
+    margin: 0px;
+}
+
+.modal-purpose-content {
+    margin: 10px 20px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+    text-align: left;
+    font-size: 16px;
+}
+
+
+.modal-purpose-content-checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-purpose-content-checkbox label {
+    cursor: pointer;
+    /* ทำให้สามารถคลิกได้ */
+    user-select: none;
+    /* หลีกเลี่ยงการเลือกข้อความ */
+    margin-left: 5px;
+    color: #939393;
+}
+
+.modal-purpose-content-checkbox input {
+    /* appearance: none; */
+    /* ทำให้ไม่ใช้ดีฟอลต์สไตล์ของเบราว์เซอร์ */
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.modal-purpose-content-checkbox input[type="checkbox"]:checked {
+    background-color: #A73B24;
+    border-color: #A73B24;
+}
+
+.modal-purpose-content-checkbox input[type="checkbox"]:checked::after {
+    /* content: "✔"; */
+    position: absolute;
+    font-size: 14px;
+    color: white;
+}
+
+.modal-purpose-headline span {
+    color: red;
+    font-weight: 600;
+}
+
+.modal-headline {
+    font-size: 38px;
+    color: #6d6d6d;
+}
+
+.modal-user-email {
+    font-size: 14px;
+    color: #979797;
+}
+
+.modal-purpose-container {
+    margin: 20px 0px;
+}
+
+.modal-purpose-headline {
+    font-size: 20px;
+    color: #6d6d6d;
+}
+
+
+.modal-actions {
+    margin-top: 10px;
+}
+
+.modal-actions button {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #A73B24;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Prompt';
+    font-weight: normal;
+    transition: all 0.3s ease;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-actions button:hover {
+    background-color: #861e13;
+}
+
+.modal-actions button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 10px 0px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid #939393;
+    padding: 2px 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.tag:hover {
+    background-color: #ddd;
+    color: black !important;
+}
+
+.tag.selected {
+    background-color: #007bff;
+    color: white;
+}
+
+.metadata-container,
+.metadata-container a {
+    color: #939393;
+    font-size: 14px;
+}
+
+.metadata-container a:hover {
+    color: #A73B24;
+}
+
+.details-container {
+    display: flex;
+    gap: 26px;
+    align-items: center;
+    color: #939393;
+}
+
+.details-container span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.modal-download-container {
+    width: 100%;
+    height: auto;
+}
+
+.terms {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.terms label,
+.terms a {
+    cursor: pointer;
+    /* ทำให้สามารถคลิกได้ */
+    user-select: none;
+    /* หลีกเลี่ยงการเลือกข้อความ */
+    margin-left: 2px;
+    font-size: 12px;
+    color: #939393;
+}
+
+.terms a:hover {
+    color: #A73B24;
+}
+
+.terms input {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+
+.close-btn-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close-btn-container:hover .close-icon {
+    color: #A73B24;
+    transform: scale(1.2);
+}
+
+.close-btn-container .close-icon {
+    transition: color 0.3s, transform 0.3s;
+}

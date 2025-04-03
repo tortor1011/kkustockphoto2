@@ -1,0 +1,95 @@
+#search-page-hero-section {
+    width: 100%;
+    display: flex;
+    height: 40vh;
+    background-image: url('/images/hero-bg2.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+
+}
+
+
+#search-page-content {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+#search-page-content-container {
+    margin: 50px 100px;
+}
+
+/** แบบเดิม ใช้ grid **/
+
+/* .results {
+    margin: 50px 0px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+}
+.results img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+} */
+
+
+/** วิธีที่ 3 **/
+.results {
+    margin: 50px 0px;
+    column-count: 4;
+    column-gap: 8px;
+}
+
+.results img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.results img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .results {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        /* ลดขนาดรูปเมื่อจอเล็ก */
+    }
+}
+
+
+/* cursor เจนมาให้ */
+.loading-container,
+.error-container,
+.no-results-container {
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.error-container {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+}
+
+.error-container button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.error-container button:hover {
+    background-color: #c82333;
+}

@@ -1,0 +1,49 @@
+
+:root {
+  font-family: 'prompt', kanit, Roboto, system-ui, Avenir, Helvetica, Arial, sans-serif !important;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* font-synthesis: none; */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424; */
+}
+
+
+
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  background-image: url('/assets/Background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* animation: waveBg 8s ease-in-out infinite alternate; */
+}
+
+/* @keyframes waveBg {
+  0% {
+    background-position: 50% 50%;
+  }
+
+  50% {
+    background-position: 48% 52%;
+  }
+
+  100% {
+    background-position: 50% 50%;
+  }
+} */
+
+h1 {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}

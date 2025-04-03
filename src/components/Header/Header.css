@@ -1,0 +1,323 @@
+.header {
+    font-synthesis: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease, height 0.3s ease;
+}
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0px 100px;
+    max-width: 100%;
+    transition: margin 0.3s ease;
+
+}
+
+.header-container a {
+    text-decoration: none;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.logo-white {
+    height: 65px;
+    object-fit: contain;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+
+.logo-container:hover {
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.5));
+
+}
+
+
+.header.scrolled .header-container {
+    margin: 0 150px;
+}
+
+.header ul li a {
+    transition: font-size 0.3s ease;
+}
+
+.header.scrolled {
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    height: 70px;
+}
+
+.header.scrolled ul li a {
+    font-size: 16px;
+}
+
+.header.scrolled .logo-container {
+    height: 50px;
+}
+
+.login-btn {
+    background: transparent !important;
+    border: 2px solid #A73B24 !important;
+    border-radius: 16px !important;
+    padding: 5px 30px !important;
+    color: #A73B24 !important;
+    font-weight: bold !important;
+    transition: 0.3s !important;
+}
+
+.login-btn:hover {
+    background: linear-gradient(180deg, rgba(196, 62, 31, 0.6) 6.17%, rgba(194, 190, 190, 0) 70%), #5e0404 !important;
+    border: 2px solid #A73B24 !important;
+    color: white !important;
+}
+
+.header.scrolled .login-btn {
+    background: linear-gradient(180deg, rgba(167, 59, 36, 0.6) 6.17%, rgba(128, 115, 115, 0) 70%), #552e2e !important;
+    border-radius: 16px !important;
+    border: none !important;
+    padding: 5px 30px !important;
+    color: white !important;
+    font-weight: bold !important;
+    transition: 0.5s !important;
+}
+
+.header.scrolled .login-btn:hover {
+    background: linear-gradient(180deg, rgba(180, 57, 29, 0.6) 6.17%, rgba(194, 190, 190, 0) 70%), #4e0202 !important;
+}
+
+.header.scrolled .navbar ul li a:hover {
+    color: #f0a500;
+}
+
+.navbar-container {
+    display: flex;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    padding: 10px 50px;
+    margin: 0;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+
+}
+
+.navbar ul li a:hover {
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.5));
+}
+
+
+.login-icon {
+    width: 16px;
+    height: 100%;
+    position: relative;
+    object-fit: cover;
+    margin-right: 8px;
+    margin-top: 2px;
+}
+
+.header .hamburger-button {
+    display: none;
+}
+
+/* แก้ปัญหา Navbar ข้อความตกบรรทัด */
+@media (max-width: 1141px) {
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px 15px;
+        width: 100%;
+        max-width: 100%;
+        transition: margin 0.3s ease;
+    }
+
+    .header.scrolled .header-container {
+        margin: 0px;
+        padding: 0px 15px;
+    }
+}
+
+/* เปลี่ยนไปใช้ Hamburger Menu */
+/* ซ่อน Navbar และแสดง Hamburger Menu */
+@media (max-width: 975px) {
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px 15px;
+        width: 100%;
+        max-width: 100%;
+        transition: margin 0.3s ease;
+    }
+
+    .login-btn {
+        padding: 5px 20px !important;
+    }
+
+    .header.scrolled .login-btn {
+        padding: 5px 20px !important;
+    }
+
+    .login-icon {
+        width: 14px;
+        margin-right: 4px;
+    }
+
+    .header.scrolled .header-container {
+        margin: 0px;
+        padding: 0px 15px;
+    }
+
+    .navbar-container .navbar {
+        display: none;
+    }
+
+    .header .hamburger-button {
+        display: flex;
+        align-items: center;
+
+    }
+}
+
+
+/* ปรับขนาดให้เหมาะสม แก้ปัญหาปุ่ม Login ตกบรรทัด */
+@media (max-width: 470px) {
+    .logo-container .logo-text-container .logo-text1 {
+        font-size: 20px;
+    }
+
+    .logo-container .logo-text-container .logo-text2 {
+        font-size: 12px;
+    }
+
+    .logo-container .logo-white {
+        height: 50px;
+    }
+
+
+    .login-btn {
+        font-size: 12px !important;
+    }
+
+    .login-icon {
+        width: 12px !important;
+    }
+
+}
+
+/* แก้ปัญหาปุ่ม Login กว้างเกินเหมาะสม */
+/* ซ่อน icon และทำให้ข้อความเหลือแค่คำว่า Login */
+@media (max-width: 390px) {
+    .login-icon {
+        display: none;
+    }
+
+    .login-btn::before {
+        content: "Login";
+    }
+
+    .login-btn img,
+    .login-btn span {
+        display: none;
+    }
+}
+
+
+.drawer-list {
+    font-family: 'Prompt';
+}
+
+
+/* User Dropdown */
+.user-menu-container {
+    position: relative;
+    margin-left: 20px;
+}
+
+.user-icon-button {
+    padding: 0 !important;
+}
+
+.user-avatar {
+    width: 40px !important;
+    height: 40px !important;
+    border: 2px solid #A73B24 !important;
+}
+
+.user-dropdown .user-info {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 12px;
+    margin-bottom: 8px;
+}
+
+.user-name {
+    color: #333;
+    margin: 0 0 4px 0;
+    font-size: 16px;
+}
+
+.user-email {
+    color: #666;
+    margin: 0 0 4px 0;
+    font-size: 12px;
+}
+
+.user-role {
+    color: #A73B24;
+    margin: 0;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.logout-menu-item {
+    color: #dc3545 !important;
+    font-weight: bold !important;
+    justify-content: center !important;
+    font-family: prompt !important;
+}
+
+/* Responsive Design */
+@media (max-width: 975px) {
+    .user-avatar {
+        width: 35px !important;
+        height: 35px !important;
+    }
+}
+
+@media (max-width: 470px) {
+    .user-avatar {
+        width: 30px !important;
+        height: 30px !important;
+    }
+}

@@ -1,0 +1,280 @@
+#about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 300px;
+}
+
+.about-hero-section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    background-image: url('/images/hero-bg2.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.about-hero-section-container h1 {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    font-size: 80px;
+    position: relative;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .about-hero-section-container h1 {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hero-section-container h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 1200px) {
+    #about-container {
+        padding: 0 200px;
+        /* ลดขอบลงอีกสำหรับแท็บเล็ต */
+    }
+}
+
+@media (max-width: 768px) {
+    #about-container {
+        padding: 0 50px;
+        /* ลดขอบลงอีกสำหรับแท็บเล็ต */
+    }
+}
+
+@media (max-width: 480px) {
+    #about-container {
+        padding: 10px;
+        /* ลดขอบลงอีกสำหรับมือถือ */
+    }
+}
+
+.about-description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-icon-container {
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.logo-icon {
+    width: 20%;
+    margin: 0px
+}
+
+@media (max-width: 1200px) {
+    .logo-icon {
+        width: 50%;
+        height: auto;
+    }
+}
+
+.description-container {
+    text-align: center;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .description-container {
+        font-size: 16px;
+    }
+}
+
+.description-headline {
+    font-size: 36px;
+    font-weight: 600;
+    color: #424242;
+}
+
+.description-text,
+.description-text a,
+.description-text p {
+    text-align: center;
+    color: #B5B5B5;
+    margin: 5px 0px;
+}
+
+.director-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+.director-text .director-text-headline span {
+    color: #424242;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .director-text .director-text-headline span {
+        font-size: 24px;
+    }
+}
+
+.director-profile-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.director-profile {
+    width: 30%;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+}
+
+@media (max-width: 1200px) {
+    .director-profile {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .director-profile {
+        width: 50%;
+    }
+}
+
+.director-firstname {
+    color: #474747;
+    font-size: 38px;
+    font-weight: 600;
+    text-align: left;
+}
+
+
+.director-lastname {
+    color: #B5B5B5;
+    font-size: 28px;
+    font-weight: 500;
+    text-align: left;
+}
+
+
+.director-contact-container {
+    color: #B5B5B5;
+    margin-top: 10px;
+    font-weight: 100;
+    font-size: 24px;
+
+}
+
+@media (max-width: 768px) {
+    .director-firstname {
+        font-size: 28px;
+    }
+
+    .director-lastname {
+        font-size: 20px;
+    }
+
+    .director-contact-container {
+        font-size: 20px;
+    }
+}
+
+
+.team-profile-title {
+    color: #424242;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .team-profile-title {
+        font-size: 24px;
+    }
+}
+
+.team-profile-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    color: #B5B5B5;
+}
+
+.team-profile {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+.about-details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .about-details-container {
+        font-size: 18px;
+    }
+}
+
+.capstone-container {
+    margin-top: 50px;
+}
+
+.ischoolkku-container {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.ischoolkku-container img {
+    width: 200px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .ischoolkku-container img {
+        width: 150px;
+    }
+}
+
+.istudent48-container p,
+.capstone-container p,
+.bis-program-container p {
+    margin: 5px 0px;
+}
